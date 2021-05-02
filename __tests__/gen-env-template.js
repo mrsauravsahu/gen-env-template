@@ -16,4 +16,14 @@ describe(genEnvTemplate.name, () => {
         expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
         DB_CONNECTION_STRING=`)
     })
+
+    test('should preserve empty lines', () => {
+        const envFileString = `NODE_ENV=development
+
+        DB_CONNECTION_STRING=host=localhost`
+
+        expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
+
+        DB_CONNECTION_STRING=`)
+    })
 })

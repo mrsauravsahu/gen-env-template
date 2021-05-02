@@ -3,9 +3,14 @@ function genEnvTemplate(envFileString = '') {
 
     const templateFileString = envFileString
         .split('\n')
-        .map(keyValueString => {
-            var keyName = keyValueString.split('=')[0]
-            return `${keyName}=`
+        .map(currentLineString => {
+            // If empty line
+            const isEmpty = currentLineString.trim() === ''
+            if (isEmpty) return currentLineString
+
+            var keyName = currentLineString.split('=')[0]
+            var templateForCurrentLine = `${keyName}=`
+            return templateForCurrentLine
         })
         .join('\n')
 
