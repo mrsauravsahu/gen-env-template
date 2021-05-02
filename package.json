@@ -16,6 +16,11 @@
         "generate",
         "cli"
     ],
+    "homepage": "https://github.com/mrsauravsahu/gen-env-template",
+    "bugs": {
+        "email": "mrsauravsahu@outlook.com",
+        "url": "https://github.com/mrsauravsahu/gen-env-template"
+    },
     "author": "Saurav Sahu <mrsauravsahu@outlook.com>",
     "license": "MIT",
     "devDependencies": {
