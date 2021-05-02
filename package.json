@@ -1,0 +1,25 @@
+{
+    "name": "gen-env-template",
+    "version": "1.0.0",
+    "description": "Generate .env template file from .env",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "bin": {
+        "gen-env-template": "src/bin/cli.js"
+    },
+    "keywords": [
+        "dotenv",
+        "env",
+        "template",
+        "generate",
+        "cli"
+    ],
+    "author": "Saurav Sahu <mrsauravsahu@outlook.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "jest": "^26.6.3"
+    }
+}
