@@ -8,6 +8,10 @@ function genEnvTemplate(envFileString = '') {
             const isEmpty = currentLineString.trim() === ''
             if (isEmpty) return currentLineString
 
+            // If comment
+            const isComment = currentLineString.trim()[0] === '#'
+            if (isComment) return currentLineString
+
             var keyName = currentLineString.split('=')[0]
             var templateForCurrentLine = `${keyName}=`
             return templateForCurrentLine

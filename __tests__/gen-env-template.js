@@ -26,4 +26,14 @@ describe(genEnvTemplate.name, () => {
 
         DB_CONNECTION_STRING=`)
     })
+
+    test('should not modify comments', () => {
+        const envFileString = `NODE_ENV=development
+        # this is the database connection
+        DB_CONNECTION_STRING=host=localhost`
+
+        expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
+        # this is the database connection
+        DB_CONNECTION_STRING=`)
+    })
 })
