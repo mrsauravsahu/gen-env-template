@@ -4,7 +4,7 @@ const { promises } = require('fs')
 
 const genEnvTemplate = require("../gen-env-template");
 
-const envFilePath = process.argv[2]
+const envFilePath = process.argv[2] || '.env'
 const outputPath = process.argv[3] || 'template.env'
 
 const cliGenEnvTemplateAsync = async() => {
