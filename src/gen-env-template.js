@@ -1,8 +1,13 @@
+const getLineEnding = require('./get-line-ending')
+
 function genEnvTemplate(envFileString = '') {
     if (envFileString === '') return ''
 
+    // Detect line ending
+    const lineEnding = getLineEnding(envFileString)
+
     const templateFileString = envFileString
-        .split('\n')
+        .split(lineEnding)
         .map(currentLineString => {
             // If empty line
             const isEmpty = currentLineString.trim() === ''
@@ -16,7 +21,7 @@ function genEnvTemplate(envFileString = '') {
             var templateForCurrentLine = `${keyName}=`
             return templateForCurrentLine
         })
-        .join('\n')
+        .join(lineEnding)
 
     return templateFileString
 }
