@@ -3,7 +3,7 @@ const genEnvTemplate = require('../src/gen-env-template')
 
 describe('gen-env-template file tests', () => {
     test('should generate template files as per samples', async() => {
-        const basePath = `${__dirname}/bin/file-samples`
+        const basePath = `${__dirname}/file-samples`
         const dirList = await promises.readdir(basePath, { withFileTypes: true })
 
         const expectations = dirList
