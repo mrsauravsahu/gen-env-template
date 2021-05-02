@@ -6,6 +6,9 @@
     "scripts": {
         "test": "jest"
     },
+    "bin": {
+        "gen-env-template": "src/bin/cli.js"
+    },
     "keywords": [
         "dotenv",
         "env",
