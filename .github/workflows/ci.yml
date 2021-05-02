@@ -1,0 +1,14 @@
+name: test-workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 
+        uses: actions/checkout@master
+        
+      - name: run tests
+        run: docker build --rm -f "dockerfile.tests" .
