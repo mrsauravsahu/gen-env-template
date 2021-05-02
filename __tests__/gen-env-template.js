@@ -9,4 +9,11 @@ describe(genEnvTemplate.name, () => {
         const envFileString = `NODE_ENV=development`
         expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=`)
     })
+
+    test('should remove values for all key value pairs', () => {
+        const envFileString = `NODE_ENV=development
+        DB_CONNECTION_STRING=host=localhost`
+        expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
+        DB_CONNECTION_STRING=`)
+    })
 })
