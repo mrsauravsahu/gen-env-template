@@ -58,7 +58,7 @@ console.log(genEnvTemplate(inputString))
 
 ### Licensing 
 
-This project uses the MIT license as explained [here](license.md)
+This project uses the MIT license as explained [here](./LICENSE)
 
 ### Contributing 
 
