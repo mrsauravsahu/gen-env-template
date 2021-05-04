@@ -1,0 +1,30 @@
+name: deploy-workflow
+
+on:
+  push:
+    branches:
+      - feat/cd
+
+env:
+  NODE_VERSION: "14.16.1"
+
+jobs:
+  deploy_package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: install packages
+        run: npm install
+
+      - name: deploy to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_AUTOMATION_TOKEN }}
