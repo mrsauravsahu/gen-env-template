@@ -5,6 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "lint": "eslint --ext .js .",
+        "prepare": "husky install",
         "test": "GEN_ENV_TEMPLATE_ABSOLUTE_PATH=$PWD/src/bin/cli.js jest"
     },
     "bin": {
