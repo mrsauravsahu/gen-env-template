@@ -1,0 +1,31 @@
+name: deploy-workflow
+
+on:
+  push:
+    branches:
+      - cool
+
+env:
+  NODE_VERSION: "14.16.1"
+
+jobs:
+  deploy_package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org/
+
+      - name: install packages
+        run: npm install
+
+      - name: deploy to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
