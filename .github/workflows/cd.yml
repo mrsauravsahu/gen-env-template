@@ -3,7 +3,7 @@ name: deploy-workflow
 on:
   push:
     branches:
-      - feat/cd
+      - cool
 
 env:
   NODE_VERSION: "14.16.1"
