@@ -1,0 +1,9 @@
+.dockerignore
+dockerfile.tests
+.DS_Store
+.husky
+.github
+__tests__
+.nvmrc
+.eslintrc.js
+!package-lock.json
