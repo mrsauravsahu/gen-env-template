@@ -1,3 +1,3 @@
-const genEnvTemplate = require("./gen-env-template");
+const genEnvTemplate = require('./gen-env-template');
 
 module.exports = genEnvTemplate;
