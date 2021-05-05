@@ -1,21 +1,20 @@
-const { promises } = require('fs')
+const { readFileSync, readdirSync } = require('fs')
 const genEnvTemplate = require('../src/gen-env-template')
 
-describe('gen-env-template file tests', () => {
-  test('should generate template files as per samples', async () => {
-    const basePath = `${__dirname}/file-samples`
-    const dirList = await promises.readdir(basePath, { withFileTypes: true })
+const basePath = `${__dirname}/file-samples`
 
-    const expectations = dirList
-      .filter((entry) => entry.isFile() && entry.name.includes('input'))
-      .map(async (fileEntry) => {
+describe('gen-env-template file tests', () => {
+  const dirList = readdirSync(basePath, { withFileTypes: true })
+
+  dirList
+    .filter((entry) => entry.isFile() && entry.name.includes('input'))
+    .forEach((fileEntry) => {
+      test(`shell file test case: '${fileEntry.name.replace('.input.env', '')}'`, async () => {
         const inputFilePath = `${basePath}/${fileEntry.name}`
-        const fileString = await promises.readFile(inputFilePath, { encoding: 'utf-8' })
-        const expectedOutput = await promises.readFile(inputFilePath.replace('input', 'output'), { encoding: 'utf-8' })
+        const fileString = readFileSync(inputFilePath, { encoding: 'utf-8' })
+        const expectedOutput = readFileSync(inputFilePath.replace('input', 'output'), { encoding: 'utf-8' })
         const receivedOutput = genEnvTemplate(fileString)
         expect(receivedOutput).toEqual(expectedOutput)
       })
-
-    await Promise.all(expectations)
-  })
+    })
 })
