@@ -2,6 +2,10 @@
 
 Generate template .env file from your .env file.
 
+## What's new? 🎉 🥳
+
+- Use `gen-env-template` through npx or pnpx
+
 ## Why?
 
 - Manual work is boring. 
