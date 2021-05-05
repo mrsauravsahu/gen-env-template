@@ -5,7 +5,7 @@ const basePath = `${__dirname}/file-samples`
 const testTempOutputPath = `${basePath}/shell-tests`
 const bin = `node ${process.env.GEN_ENV_TEMPLATE_ABSOLUTE_PATH}`
 
-describe('gen-env-template file based e2e tests', () => {
+describe('gen-env-template file based shell tests', () => {
   beforeAll(() => {
     shell.exec(`mkdir ${testTempOutputPath}`)
   })
