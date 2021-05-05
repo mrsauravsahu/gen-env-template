@@ -10,4 +10,4 @@ COPY . .
 
 RUN npm i -g file:./
 
-RUN npm t
+RUN npm t -- --verbose
