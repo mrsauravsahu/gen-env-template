@@ -1,4 +1,4 @@
-const { promises } = require('fs')
+const { readdirSync, readFileSync } = require('fs')
 const shell = require('shelljs')
 
 const basePath = `${__dirname}/file-samples`
@@ -14,23 +14,22 @@ describe('gen-env-template file based e2e tests', () => {
     shell.exec(`rm -r ${testTempOutputPath}`)
   })
 
-  test('should generate template files as per samples', async () => {
-    const dirList = await promises.readdir(basePath, { withFileTypes: true })
+  // test('should generate template files as per samples', async () => {
+  const dirList = readdirSync(basePath, { withFileTypes: true })
 
-    const expectations = dirList
-      .filter((entry) => entry.isFile() && entry.name.includes('input'))
-      .map(async (fileEntry) => {
+  dirList
+    .filter((entry) => entry.isFile() && entry.name.includes('input'))
+    .forEach((fileEntry) => {
+      test(`shell file test case: '${fileEntry.name.replace('.input.env', '')}'`, async () => {
         const inputFilePath = `${basePath}/${fileEntry.name}`
         const outputFilePath = `${testTempOutputPath}/${fileEntry.name.replace('input', 'output')}`
         const expectedOutputFilePath = `${basePath}/${fileEntry.name.replace('input', 'output')}`
 
         shell.exec(`${bin} ${inputFilePath} ${outputFilePath}`)
 
-        const expectedOutputString = await promises.readFile(expectedOutputFilePath, { encoding: 'utf-8' })
-        const actualOutputString = await promises.readFile(outputFilePath, { encoding: 'utf-8' })
+        const expectedOutputString = readFileSync(expectedOutputFilePath, { encoding: 'utf-8' })
+        const actualOutputString = readFileSync(outputFilePath, { encoding: 'utf-8' })
         expect(actualOutputString).toEqual(expectedOutputString)
       })
-
-    await Promise.all(expectations)
-  })
+    })
 })
