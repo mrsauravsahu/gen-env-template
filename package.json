@@ -1,6 +1,6 @@
 {
     "name": "gen-env-template",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Generate .env template file from .env",
     "main": "src/index.js",
     "scripts": {
@@ -10,10 +10,13 @@
         "lint:staged": "lint-staged"
     },
     "bin": {
+        "genv": "src/bin/cli.js",
         "gen-env-template": "src/bin/cli.js"
     },
     "lint-staged": {
-        "*.js": ["eslint"]
+        "*.js": [
+            "eslint"
+        ]
     },
     "keywords": [
         "dotenv",
