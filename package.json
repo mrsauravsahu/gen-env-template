@@ -10,10 +10,13 @@
         "lint:staged": "lint-staged"
     },
     "bin": {
+        "genv": "src/bin/cli.js",
         "gen-env-template": "src/bin/cli.js"
     },
     "lint-staged": {
-        "*.js": ["eslint"]
+        "*.js": [
+            "eslint"
+        ]
     },
     "keywords": [
         "dotenv",
