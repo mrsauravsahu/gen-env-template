@@ -1,5 +1,6 @@
 const { promises } = require('fs')
 const { Command, flags } = require('@oclif/command')
+const packageInfo = require('../package.json')
 const genEnvTemplate = require('./gen-env-template')
 
 class GenEnvTemplateCommand extends Command {
@@ -31,10 +32,7 @@ class GenEnvTemplateCommand extends Command {
   }
 }
 
-GenEnvTemplateCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+GenEnvTemplateCommand.description = packageInfo.description
 
 GenEnvTemplateCommand.flags = {
   // add --version flag to show CLI version
