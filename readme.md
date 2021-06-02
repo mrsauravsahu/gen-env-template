@@ -1,5 +1,9 @@
 # gen-env-template
 
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/gen-env-template.svg)](https://npmjs.org/package/gen-env-template)
+[![License](https://img.shields.io/npm/l/gen-env-template.svg)](https://github.com/mrsauravsahu/gen-env-template/blob/cool/LICENSE)
+
 Generate template .env file from your .env file.
 
 ## What's new? 🎉 🥳
