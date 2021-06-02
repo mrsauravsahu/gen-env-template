@@ -1,3 +1,7 @@
 #!/usr/bin/env node
 
-require('..').run()
+const Command = require('..')
+
+Command
+  .run()
+  .catch(require('@oclif/errors/handle'))
