@@ -10,9 +10,12 @@
         "lint:staged": "lint-staged"
     },
     "bin": {
-        "genv": "src/bin/cli.js",
-        "gen-env-template": "src/bin/cli.js"
+        "genv": "src/bin/run",
+        "gen-env-template": "src/bin/run"
     },
+    "files": [
+        "/src"
+    ],
     "lint-staged": {
         "*.js": [
             "eslint"
@@ -23,7 +26,8 @@
         "env",
         "template",
         "generate",
-        "cli"
+        "cli",
+        "oclif"
     ],
     "homepage": "https://github.com/mrsauravsahu/gen-env-template",
     "bugs": {
