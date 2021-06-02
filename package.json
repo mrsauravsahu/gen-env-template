@@ -37,6 +37,7 @@
     "author": "Saurav Sahu <mrsauravsahu@outlook.com>",
     "license": "MIT",
     "devDependencies": {
+        "@babel/eslint-parser": "^7.14.4",
         "@oclif/dev-cli": "^1.26.0",
         "@types/jest": "^26.0.23",
         "eslint": "^7.25.0",

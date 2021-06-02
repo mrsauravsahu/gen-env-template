@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@babel/eslint-parser': ^7.14.4
   '@oclif/command': ^1.8.0
   '@oclif/config': ^1.17.0
   '@oclif/dev-cli': ^1.26.0
@@ -22,6 +23,7 @@ dependencies:
   '@oclif/plugin-help': 3.2.2
 
 devDependencies:
+  '@babel/eslint-parser': 7.14.4_eslint@7.27.0
   '@oclif/dev-cli': 1.26.0
   '@types/jest': 26.0.23
   eslint: 7.27.0
@@ -71,6 +73,19 @@ packages:
       source-map: 0.5.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@babel/eslint-parser/7.14.4_eslint@7.27.0:
+    resolution: {integrity: sha512-7CTckFLPBGEfCKqlrnJq2PIId3UmJ5hW+D4dsv/VvuA5DapgqyZFCttq+8oeRIJMZQizFIe5gel3xm2SbrqlYA==}
+    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
+    peerDependencies:
+      '@babel/core': '>=7.11.0'
+      eslint: '>=7.5.0'
+    dependencies:
+      eslint: 7.27.0
+      eslint-scope: 5.1.1
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.0
     dev: true
 
   /@babel/generator/7.14.3:
