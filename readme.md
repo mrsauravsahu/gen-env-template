@@ -8,7 +8,13 @@ Generate template .env file from your .env file.
 
 ## What's new? 🎉 🥳
 
-- Use `gen-env-template` through npx or pnpx
+- **v1.0.7** - Add safe region to keep sample values
+- **v1.0.6** - Create CLI with OCLIF
+- **v1.0.5** - Add alias command `genv`
+- **v1.0.4** - Use `gen-env-template` through npx or pnpx
+- **v1.0.3** - No usage change. Setup CI/CD
+- **v1.0.2** - Trim bundle by ignoring files in .npmignore
+- **v1.0.0** - Basic template generator
 
 ## Why?
 
