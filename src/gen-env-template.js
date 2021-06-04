@@ -37,7 +37,7 @@ function genEnvTemplate(envFileString = '') {
       // If in safe mode, return the same line without modifications
       if (isInSafeMode) return currentLineString.trim()
 
-      const keyName = currentLineString.split('=')[0]
+      const keyName = currentLineString.split('=')[0].trim()
       const templateForCurrentLine = `${keyName}=`
 
       return templateForCurrentLine

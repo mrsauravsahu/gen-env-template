@@ -11,29 +11,31 @@ describe(genEnvTemplate.name, () => {
   })
 
   test('should remove values for all key value pairs', () => {
-    const envFileString = `NODE_ENV=development
-        DB_CONNECTION_STRING=host=localhost`
-    expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
-        DB_CONNECTION_STRING=`)
+    const envFileString = `
+NODE_ENV=development
+DB_CONNECTION_STRING=host=localhost`
+    expect(genEnvTemplate(envFileString)).toEqual(`
+NODE_ENV=
+DB_CONNECTION_STRING=`)
   })
 
   test('should preserve empty lines', () => {
     const envFileString = `NODE_ENV=development
 
-        DB_CONNECTION_STRING=host=localhost`
+DB_CONNECTION_STRING=host=localhost`
 
     expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
 
-        DB_CONNECTION_STRING=`)
+DB_CONNECTION_STRING=`)
   })
 
   test('should not modify comments', () => {
     const envFileString = `NODE_ENV=development
-        # this is the database connection
-        DB_CONNECTION_STRING=host=localhost`
+# this is the database connection
+DB_CONNECTION_STRING=host=localhost`
 
     expect(genEnvTemplate(envFileString)).toEqual(`NODE_ENV=
-        # this is the database connection
-        DB_CONNECTION_STRING=`)
+# this is the database connection
+DB_CONNECTION_STRING=`)
   })
 })

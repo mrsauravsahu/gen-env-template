@@ -8,6 +8,7 @@ Generate template .env file from your .env file.
 
 ## What's new? 🎉 🥳
 
+- **v1.0.8** - Remove whitespaces around key
 - **v1.0.7** - Add safe region to keep sample values
 - **v1.0.6** - Create CLI with OCLIF
 - **v1.0.5** - Add alias command `genv`
