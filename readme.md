@@ -1,4 +1,7 @@
 # gen-env-template
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/gen-env-template.svg)](https://npmjs.org/package/gen-env-template)
@@ -71,12 +74,32 @@ console.log(genEnvTemplate(inputString))
 >> NODE_ENV=
 ```
 
+### Conntributors
+
 ### Licensing 
 
 This project uses the MIT license as explained [here](./LICENSE)
 
 ### Contributing 
 
-This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs.
+This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs. For quick response, I'm the most active on twitter [@mrsauravsahu](https://twitter.com/mrsauravsahu) \- Saurav
 
-\- Sahu, S
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/mrsauravsahu"><img src="https://avatars.githubusercontent.com/u/9134050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saurav Sahu</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=mrsauravsahu" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
