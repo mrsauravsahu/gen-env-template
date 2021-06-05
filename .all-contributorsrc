@@ -1,3 +1,22 @@
 {
-  "files": [ "readme.md" ]
+  "files": [
+    "readme.md"
+  ],
+  "projectName": "gen-env-template",
+  "projectOwner": "mrsauravsahu",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "mrsauravsahu",
+      "name": "Saurav Sahu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9134050?v=4",
+      "profile": "http://links.mrsauravsahu.tech",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
 }
