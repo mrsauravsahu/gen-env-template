@@ -11,6 +11,7 @@ Generate template .env file from your .env file.
 
 ## What's new? 🎉 🥳
 
+- **v1.0.9** - Add `-d` or `--dry-run` switch to output to console
 - **v1.0.8** - Remove whitespaces around key
 - **v1.0.7** - Add safe region to keep sample values
 - **v1.0.6** - Create CLI with OCLIF

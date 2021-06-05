@@ -1,6 +1,6 @@
 {
     "name": "gen-env-template",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Generate .env template file from .env",
     "main": "src/index.js",
     "scripts": {
