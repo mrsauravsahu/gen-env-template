@@ -74,8 +74,6 @@ console.log(genEnvTemplate(inputString))
 >> NODE_ENV=
 ```
 
-### Conntributors
-
 ### Licensing 
 
 This project uses the MIT license as explained [here](./LICENSE)
