@@ -82,7 +82,7 @@ This project uses the MIT license as explained [here](./LICENSE)
 
 ### Contributing 
 
-This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs \- Sahu, S
+This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs. For quick response, I'm the most active on twitter [@mrsauravsahu](https://twitter.com/mrsauravsahu) \- Saurav
 
 ## Contributors ✨
 
