@@ -1,17 +1,19 @@
-const getLineEnding = require('./get-line-ending')
 const constants = require('./constants')
 
 function genEnvTemplate(envFileString = '') {
   if (envFileString === '') return ''
 
   // Detect line ending
-  const lineEnding = getLineEnding(envFileString)
+  const lineEnding = '\n'
 
   let isInSafeMode = false
 
   const templateFileString = envFileString
     .split(lineEnding)
     .map((currentLineString) => {
+      const isCRLF = currentLineString.substring(currentLineString.length - 1) === '\r'
+      const crlfEnding = isCRLF ? '\r' : ''
+
       // If empty line
       const isEmpty = currentLineString.trim() === ''
       if (isEmpty) return currentLineString
@@ -35,12 +37,10 @@ function genEnvTemplate(envFileString = '') {
       }
 
       // If in safe mode, return the same line without modifications
-      if (isInSafeMode) return currentLineString.trim()
+      if (isInSafeMode) return `${currentLineString.trim()}${crlfEnding}`
 
       const keyName = currentLineString.split('=')[0].trim()
-      const templateForCurrentLine = `${keyName}=`
-
-      return templateForCurrentLine
+      return `${keyName}=${crlfEnding}`
     })
     .join(lineEnding)
 
