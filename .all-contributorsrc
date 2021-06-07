@@ -19,7 +19,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "abishekaditya",
+      "name": "Abishek Aditya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9787009?v=4",
+      "profile": "http://abishekaditya.me",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
