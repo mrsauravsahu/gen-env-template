@@ -3,9 +3,6 @@
 
 npm run lint:staged
 
-# delete .env templates
-# rm {*,}.env-template || true
-
 for envFile in `ls {*,.}env`
 do
   src/bin/run $envFile $envFile-template
