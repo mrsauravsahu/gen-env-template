@@ -7,8 +7,11 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
-      - name: checkout 
+      - name: checkout
         uses: actions/checkout@master
-        
+
+      - name: audit checks
+        run: npm audit
+
       - name: run tests
         run: docker build --rm -f "dockerfile.tests" .
