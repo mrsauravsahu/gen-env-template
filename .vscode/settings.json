@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        ".all-contributorsrc": "json"
+        ".all-contributorsrc": "json",
+        "*.env-template": "env"
     }
 }

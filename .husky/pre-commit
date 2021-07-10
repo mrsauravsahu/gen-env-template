@@ -2,3 +2,11 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run lint:staged
+
+for envFile in `ls {*,.}env`
+do
+  src/bin/run $envFile $envFile-template
+  # not auto-staging files to prevent 
+  # secrets getting committed by accident
+  # git add $envFile-template
+done
