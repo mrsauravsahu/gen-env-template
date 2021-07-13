@@ -28,6 +28,14 @@ class GenEnvTemplateCommand extends Command {
     help: flags.help({ char: 'h' }),
     // add dry-run flag to output to the console
     'dry-run': flags.boolean({ char: 'd' }),
+    format: flags.enum({
+      char: 'f',
+      options: ['env-template', 'md'],
+      description: 'Format for the template generation',
+      default: 'env-template',
+      name: 'format',
+      required: false,
+    }),
   }
 
   async run() {
@@ -38,7 +46,7 @@ class GenEnvTemplateCommand extends Command {
       { encoding: 'utf-8' },
     )
 
-    const templateFileString = genEnvTemplate(envFileString)
+    const templateFileString = genEnvTemplate(envFileString, appFlags.format)
 
     if (appFlags['dry-run']) {
       // eslint-disable-next-line no-console
