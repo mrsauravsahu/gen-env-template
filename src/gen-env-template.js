@@ -1,6 +1,7 @@
 const constants = require('./constants')
+const markdownProcessor = require('./utils/markdown-processor')
 
-function genEnvTemplate(envFileString = '') {
+function genEnvTemplate(envFileString = '', format = 'env-template') {
   if (envFileString === '') return ''
 
   // Detect line ending
@@ -8,7 +9,7 @@ function genEnvTemplate(envFileString = '') {
 
   let isInSafeMode = false
 
-  const templateFileString = envFileString
+  const templateFileTokens = envFileString
     .split(lineEnding)
     .map((currentLineString) => {
       const isCRLF = currentLineString.substring(currentLineString.length - 1) === '\r'
@@ -25,7 +26,7 @@ function genEnvTemplate(envFileString = '') {
 
         const regionCheckString = currentLineString.trim().replace(/ /g, '').substring(1)
 
-        // Beginning of Safe Regionn
+        // Beginning of Safe Region
         const isSafeRegion = regionCheckString.startsWith(`region${constants.SAFE_REGION}`)
         if (isSafeRegion) isInSafeMode = true
 
@@ -42,8 +43,10 @@ function genEnvTemplate(envFileString = '') {
       const keyName = currentLineString.split('=')[0].trim()
       return `${keyName}=${crlfEnding}`
     })
-    .join(lineEnding)
 
+  if (format === 'md') { return markdownProcessor(templateFileTokens) }
+
+  const templateFileString = templateFileTokens.join(lineEnding)
   return templateFileString
 }
 
