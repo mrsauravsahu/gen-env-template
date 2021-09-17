@@ -74,14 +74,29 @@ DB_CONNECTION_STRING=host=localhost`
 |DB_CONNECTION_STRING|-|`)
     })
 
-    test.skip('should not modify comments', () => {
+    test('should skip comments', () => {
       const envFileString = `NODE_ENV=development
 # this is the database connection
 DB_CONNECTION_STRING=host=localhost`
 
-      expect(genEnvTemplate(envFileString, 'md')).toEqual(`NODE_ENV=
+      expect(genEnvTemplate(envFileString, 'md')).toEqual(`|Key|Sample Value|
+|---|---|
+|NODE_ENV|-|
+|DB_CONNECTION_STRING|-|`)
+    })
+
+    test('should add value to sample-value column when in safe region', () => {
+      const envFileString = `#region safe 
+NODE_ENV=development
+
 # this is the database connection
-DB_CONNECTION_STRING=`)
+DB_CONNECTION_STRING=host=localhost
+#endregion safe`
+
+      expect(genEnvTemplate(envFileString, 'md')).toEqual(`|Key|Sample Value|
+|---|---|
+|NODE_ENV|development|
+|DB_CONNECTION_STRING|host=localhost|`)
     })
   })
 })
