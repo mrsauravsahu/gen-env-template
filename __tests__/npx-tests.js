@@ -24,7 +24,9 @@ describe('gen-env-template file based npx tests', () => {
         const outputFilePath = `${testTempOutputPath}/${fileEntry.name.replace('input', 'output')}`
         const expectedOutputFilePath = `${basePath}/${fileEntry.name.replace('input', 'output')}`
 
-        shell.exec(`npx -p file:/${process.env.GEN_ENV_TEMPLATE_BASE} ${packageName} ${inputFilePath} ${outputFilePath}`)
+        const genvTemplate = process.env.GEN_ENV_TEMPLATE_BASE
+
+        shell.exec(`npx -p file:/${genvTemplate} ${packageName} ${inputFilePath} ${outputFilePath}`)
 
         const expectedOutputString = readFileSync(expectedOutputFilePath, { encoding: 'utf-8' })
         const actualOutputString = readFileSync(outputFilePath, { encoding: 'utf-8' })
