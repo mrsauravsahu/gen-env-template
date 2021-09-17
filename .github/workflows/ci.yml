@@ -10,8 +10,5 @@ jobs:
       - name: checkout
         uses: actions/checkout@master
 
-      - name: audit checks
-        run: npm audit
-
       - name: run tests
         run: docker build --rm -f "dockerfile.tests" .
