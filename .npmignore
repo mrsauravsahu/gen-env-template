@@ -1,5 +1,5 @@
 .dockerignore
-dockerfile.tests
+tests.dockerfile
 .DS_Store
 .husky
 .github

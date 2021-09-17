@@ -1,11 +1,13 @@
-FROM node:14.16.1
+FROM node:14.17.6
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm i
-    
+RUN npm ci
+
+RUN npm audit
+
 COPY . .
 
 RUN npm i -g file:./
