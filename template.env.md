@@ -1,4 +1,5 @@
 |Key|Sample Value|
 |---|---|
 |NODE_ENV|development|
-|DB_CONNECTION_STRING|-|
+|SAMPLE_ENV|sample1n|
+|NEW_API_KEY|-|
