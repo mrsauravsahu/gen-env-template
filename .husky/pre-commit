@@ -3,10 +3,10 @@
 
 npm run lint:staged
 
-for envFile in `ls {*,.}env`
-do
-  src/bin/run $envFile $envFile-template
-  # not auto-staging files to prevent 
-  # secrets getting committed by accident
-  # git add $envFile-template
-done
+envFile=.env
+
+src/bin/run $envFile template$envFile
+src/bin/run -f md $envFile template$envFile.md
+# not auto-staging files to prevent 
+# secrets getting committed by accident
+# git add $envFile-template

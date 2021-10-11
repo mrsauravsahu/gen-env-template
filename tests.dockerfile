@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm ci
 
-RUN npm audit
+RUN npm audit || true
 
 COPY . .
 
