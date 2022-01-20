@@ -2,7 +2,7 @@
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/gen-env-template.svg)](https://npmjs.org/package/gen-env-template)
-[![License](https://img.shields.io/npm/l/gen-env-template.svg)](https://github.com/mrsauravsahu/gen-env-template/blob/cool/LICENSE)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![License](https://img.shields.io/npm/l/gen-env-template.svg)](https://github.com/mrsauravsahu/gen-env-template/blob/main/LICENSE)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
