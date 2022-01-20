@@ -3,7 +3,7 @@ name: deploy-workflow
 on:
   push:
     branches:
-      - cool
+      - main
 
 env:
   NODE_VERSION: "14.17.6"
