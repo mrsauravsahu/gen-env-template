@@ -10,7 +10,8 @@ Generate template .env file from your .env file.
 
 ## What's new? 🎉 🥳
 
-- **v2.0.2** - Bump all versions
+- **v2.0.3** - Fix @oclif/command not found - move to dependencies
+- **v2.0.2** - Bump all npm package versions
 - **v2.0.1** - NPM audit fixes
 - **v2.0.0** - Add format `-f` switch. Generate template-env or markdown format
 - **v1.0.10** - Preserve `LF` or `CRLF` line endings from the input env file
