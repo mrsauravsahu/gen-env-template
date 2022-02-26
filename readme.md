@@ -8,23 +8,6 @@
 
 Generate template .env file from your .env file.
 
-## What's new? 🎉 🥳
-
-- **v2.0.3** - Fix @oclif/command not found - move to dependencies
-- **v2.0.2** - Bump all npm package versions
-- **v2.0.1** - NPM audit fixes
-- **v2.0.0** - Add format `-f` switch. Generate template-env or markdown format
-- **v1.0.10** - Preserve `LF` or `CRLF` line endings from the input env file
-- **v1.0.9** - Add `-d` or `--dry-run` switch to output to console
-- **v1.0.8** - Remove whitespaces around key
-- **v1.0.7** - Add safe region to keep sample values
-- **v1.0.6** - Create CLI with OCLIF
-- **v1.0.5** - Add alias command `genv`
-- **v1.0.4** - Use `gen-env-template` through npx or pnpx
-- **v1.0.3** - No usage change. Setup CI/CD
-- **v1.0.2** - Trim bundle by ignoring files in .npmignore
-- **v1.0.0** - Basic template generator
-
 ## Why?
 
 - Manual work is boring. 
@@ -108,3 +91,21 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## What's new? 🎉 🥳
+
+- **v2.0.4** - Update npm dependencies
+- **v2.0.3** - Fix @oclif/command not found - move to dependencies
+- **v2.0.2** - Bump all npm package versions
+- **v2.0.1** - NPM audit fixes
+- **v2.0.0** - Add format `-f` switch. Generate template-env or markdown format
+- **v1.0.10** - Preserve `LF` or `CRLF` line endings from the input env file
+- **v1.0.9** - Add `-d` or `--dry-run` switch to output to console
+- **v1.0.8** - Remove whitespaces around key
+- **v1.0.7** - Add safe region to keep sample values
+- **v1.0.6** - Create CLI with OCLIF
+- **v1.0.5** - Add alias command `genv`
+- **v1.0.4** - Use `gen-env-template` through npx or pnpx
+- **v1.0.3** - No usage change. Setup CI/CD
+- **v1.0.2** - Trim bundle by ignoring files in .npmignore
+- **v1.0.0** - Basic template generator
