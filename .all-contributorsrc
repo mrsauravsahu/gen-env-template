@@ -28,6 +28,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "RamPrasadAgarwal",
+      "name": "Ram Prasad Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17383560?v=4",
+      "profile": "https://github.com/RamPrasadAgarwal",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
