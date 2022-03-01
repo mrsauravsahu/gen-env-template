@@ -8,43 +8,55 @@
 
 Generate template .env file from your .env file.
 
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://abishekaditya.me"><img src="https://avatars.githubusercontent.com/u/9787009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abishek Aditya</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/issues?q=author%3Aabishekaditya" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/RamPrasadAgarwal"><img src="https://avatars.githubusercontent.com/u/17383560?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ram Prasad Agarwal</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=RamPrasadAgarwal" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mrsauravsahu"><img src="https://avatars.githubusercontent.com/u/9134050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saurav Sahu</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=mrsauravsahu" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## Why?
 
-- Manual work is boring. 
-- For documenting Environment Variables an app needs, it's always best to add a template .env file to source control.
+A well documented template .env file helps setup the app.
 
 ## How to use?
 
-This package exposes both a CLI and an SDK 
+This package exposes both a CLI and an SDK.
 
 ### CLI Usage
 
-#### Install the tool 
+#### Install the tool
 
-- You can install globally or locally
-- With pnpm, npm, yarn 
-
-Examples: 
+- You can install `gen-env-template` as a devDependency.
 
 ```
-$ npm i -g gen-env-template
+$ npm i -D gen-env-template
 
-$ pnpm i -g gen-env-template
+$ pnpm i -D gen-env-template
 
-$ yarn global add gen-env-template
-```
-
-The above command should add the gen-env-template to your `$PATH`. 
-
-```
-+ gen-env-template@1.0.0
+$ yarn add --dev gen-env-template
 ```
 
 You can now use the command like so:
 
 ```
-gen-env-template [path to input .env]=.env [path to output .env]=template.env
+./node_modules/.bin/gen-env-template [path to input .env]=.env [path to output .env]=template.env
 ```
+
+(`genv` is a shorthand command which can be used interchangeably.)
 
 This will write the output to the path specified.
 
@@ -68,27 +80,7 @@ This project uses the MIT license as explained [here](./LICENSE)
 
 ### Contributing 
 
-This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs. For quick response, I'm the most active on twitter [@mrsauravsahu](https://twitter.com/mrsauravsahu) \- Saurav
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/mrsauravsahu"><img src="https://avatars.githubusercontent.com/u/9134050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saurav Sahu</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=mrsauravsahu" title="Code">💻</a></td>
-    <td align="center"><a href="http://abishekaditya.me"><img src="https://avatars.githubusercontent.com/u/9787009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abishek Aditya</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/issues?q=author%3Aabishekaditya" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/RamPrasadAgarwal"><img src="https://avatars.githubusercontent.com/u/17383560?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ram Prasad Agarwal</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=RamPrasadAgarwal" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+This project is Open-Source and I'm happy to hear feedback and receive improvements through Issues and PRs. For quick response, I'm the most active on twitter [@mrsauravsahu](https://twitter.com/mrsauravsahu)
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
