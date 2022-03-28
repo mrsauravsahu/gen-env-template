@@ -7,6 +7,7 @@
         "lint": "eslint --ext .js .",
         "prepare": "husky install",
         "test": "GEN_ENV_TEMPLATE_BASE=$PWD GEN_ENV_TEMPLATE_ABSOLUTE_PATH=$PWD/src/bin/run jest",
+        "test:ci": "jest",
         "lint:staged": "lint-staged"
     },
     "bin": {
