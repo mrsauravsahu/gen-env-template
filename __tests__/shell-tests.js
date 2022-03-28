@@ -1,8 +1,9 @@
 const { readdirSync, readFileSync, existsSync } = require('fs')
 const shell = require('shelljs')
+const { sep } = require('path')
 
-const basePath = `${__dirname}/file-samples`
-const testTempOutputPath = `${basePath}/shell-tests`
+const basePath = `${__dirname}${sep}file-samples`
+const testTempOutputPath = `${basePath}${sep}shell-tests`
 const bin = `node ${process.env.GEN_ENV_TEMPLATE_ABSOLUTE_PATH}`
 
 describe('gen-env-template file based shell tests', () => {
@@ -20,9 +21,9 @@ describe('gen-env-template file based shell tests', () => {
     .filter((entry) => entry.isFile() && entry.name.includes('input'))
     .forEach((fileEntry) => {
       test(`shell file test case: '${fileEntry.name.replace('.input.env', '')}'`, async () => {
-        const inputFilePath = `${basePath}/${fileEntry.name}`
-        const outputFilePath = `${testTempOutputPath}/${fileEntry.name.replace('input', 'output')}`
-        const expectedOutputFilePath = `${basePath}/${fileEntry.name.replace('input', 'output')}`
+        const inputFilePath = `${basePath}${sep}${fileEntry.name}`
+        const outputFilePath = `${testTempOutputPath}${sep}${fileEntry.name.replace('input', 'output')}`
+        const expectedOutputFilePath = `${basePath}${sep}${fileEntry.name.replace('input', 'output')}`
 
         shell.exec(`${bin} ${inputFilePath} ${outputFilePath}`)
 
@@ -32,9 +33,9 @@ describe('gen-env-template file based shell tests', () => {
       })
 
       test(`dry-run file test case: '${fileEntry.name.replace('.input.env', '')}'`, async () => {
-        const inputFilePath = `${basePath}/${fileEntry.name}`
-        const outputFilePath = `${testTempOutputPath}/${fileEntry.name.replace('input', 'output')}`
-        const expectedOutputFilePath = `${basePath}/${fileEntry.name.replace('input', 'output.dry-run')}`
+        const inputFilePath = `${basePath}${sep}${fileEntry.name}`
+        const outputFilePath = `${testTempOutputPath}${sep}${fileEntry.name.replace('input', 'output')}`
+        const expectedOutputFilePath = `${basePath}${sep}${fileEntry.name.replace('input', 'output.dry-run')}`
 
         const output = shell.exec(`${bin} -d ${inputFilePath} ${outputFilePath}`)
 

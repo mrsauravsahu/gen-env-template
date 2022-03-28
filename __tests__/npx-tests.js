@@ -1,9 +1,10 @@
 const { readFileSync, readdirSync } = require('fs')
 const shell = require('shelljs')
+const { sep } = require('path')
 const { name: packageName } = require('../package.json')
 
-const basePath = `${__dirname}/file-samples`
-const testTempOutputPath = `${basePath}/npx-tests`
+const basePath = `${__dirname}${sep}file-samples`
+const testTempOutputPath = `${basePath}${sep}npx-tests`
 
 describe('gen-env-template file based npx tests', () => {
   beforeAll(() => {
@@ -20,9 +21,9 @@ describe('gen-env-template file based npx tests', () => {
     .filter((entry) => entry.isFile() && entry.name.includes('input'))
     .forEach((fileEntry) => {
       test(`npx file test case: '${fileEntry.name.replace('.input.env', '')}'`, () => {
-        const inputFilePath = `${basePath}/${fileEntry.name}`
-        const outputFilePath = `${testTempOutputPath}/${fileEntry.name.replace('input', 'output')}`
-        const expectedOutputFilePath = `${basePath}/${fileEntry.name.replace('input', 'output')}`
+        const inputFilePath = `${basePath}${sep}${fileEntry.name}`
+        const outputFilePath = `${testTempOutputPath}${sep}${fileEntry.name.replace('input', 'output')}`
+        const expectedOutputFilePath = `${basePath}${sep}${fileEntry.name.replace('input', 'output')}`
 
         const genvTemplate = process.env.GEN_ENV_TEMPLATE_BASE
 
