@@ -28,4 +28,7 @@ jobs:
         run: npm i -g file:./
 
       - name: run tests
+        env:
+          GEN_ENV_TEMPLATE_BASE: ${{ env.GITHUB_WORKSPACE }}
+          GEN_ENV_TEMPLATE_ABSOLUTE_PATH: ${{ env.GITHUB_WORKSPACE }}/src/bin/run
         run: npm t -- --verbose
