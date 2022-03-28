@@ -86,6 +86,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## What's new? 🎉 🥳
 
+- **v2.0.5** - Fix npm audit issues & bump node version
 - **v2.0.4** - Update npm dependencies
 - **v2.0.3** - Fix @oclif/command not found - move to dependencies
 - **v2.0.2** - Bump all npm package versions

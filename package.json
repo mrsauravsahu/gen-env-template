@@ -1,6 +1,6 @@
 {
     "name": "gen-env-template",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "description": "Generate .env template file from .env",
     "main": "src/bin/run",
     "scripts": {
