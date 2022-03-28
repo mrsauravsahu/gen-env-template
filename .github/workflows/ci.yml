@@ -29,6 +29,6 @@ jobs:
 
       - name: run tests
         env:
-          GEN_ENV_TEMPLATE_BASE: ${{ env.GITHUB_WORKSPACE }}
-          GEN_ENV_TEMPLATE_ABSOLUTE_PATH: ${{ env.GITHUB_WORKSPACE }}/src/bin/run
+          GEN_ENV_TEMPLATE_BASE: ${{ github.GITHUB_WORKSPACE }}
+          GEN_ENV_TEMPLATE_ABSOLUTE_PATH: ${{ github.GITHUB_WORKSPACE }}/src/bin/run
         run: npm run test:ci
