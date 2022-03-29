@@ -1,4 +1,4 @@
-const genEnvTemplate = require('../src/gen-env-template')
+const genEnvTemplate = require('../../src/gen-env-template')
 
 describe(genEnvTemplate.name, () => {
   describe('env-template format', () => {

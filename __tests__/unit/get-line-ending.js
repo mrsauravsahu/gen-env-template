@@ -1,4 +1,4 @@
-const getLineEnding = require('../src/get-line-ending')
+const getLineEnding = require('../../src/get-line-ending')
 
 describe(getLineEnding.name, () => {
   test('should return LF if string contains only \\n', () => {

@@ -24,16 +24,20 @@ function genEnvTemplate(envFileString = '', format = 'env-template') {
       ) === constants.CRLF_ENDING
       currentToken.lineEnding = isCRLF ? constants.CRLF_ENDING : ''
 
+      const cleanedCurrentLine = isCRLF
+        ? currentLineString.substring(0, currentLineString.length - 1)
+        : currentLineString
+
       // If empty line
-      currentToken.type = currentLineString.trim() === '' ? 'EMPTY' : undefined
+      currentToken.type = cleanedCurrentLine.trim() === '' ? 'EMPTY' : undefined
       if (currentToken.type === 'EMPTY') return { ...currentToken, isInSafeRegion }
 
       // If comment
-      const isComment = currentLineString.trim()[0] === '#'
+      const isComment = cleanedCurrentLine.trim()[0] === '#'
       if (isComment) {
         currentToken.type = 'COMMENT'
         // Region checks
-        const regionCheckString = currentLineString.trim().replace(/ /g, '').substring(1)
+        const regionCheckString = cleanedCurrentLine.trim().replace(/ /g, '').substring(1)
 
         // Beginning of Safe Region
         if (regionCheckString.startsWith(`region${constants.SAFE_REGION}`)) {
@@ -45,8 +49,8 @@ function genEnvTemplate(envFileString = '', format = 'env-template') {
           isInSafeRegion = false
         }
       } else {
-        const keyName = currentLineString.split('=')[0].trim()
-        const value = currentLineString.replace(new RegExp(`^${keyName}=`), '')
+        const keyName = cleanedCurrentLine.split('=')[0].trim()
+        const value = cleanedCurrentLine.replace(new RegExp(`^${keyName}=`), '')
         currentToken = {
           ...currentToken,
           key: keyName,
