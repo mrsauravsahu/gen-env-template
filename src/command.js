@@ -28,6 +28,23 @@ class GenEnvTemplateCommand extends Command {
     help: flags.help({ char: 'h' }),
     // add dry-run flag to output to the console
     'dry-run': flags.boolean({ char: 'd' }),
+    experimental: flags.boolean({
+      char: 'x',
+      description: 'Turn on experimental features',
+    }),
+    src: flags.string({
+      char: 's',
+      description: 'Path to the root of the source code directory to search for .env variables',
+      dependsOn: ['experimental', 'lang'],
+    }),
+    lang: flags.enum({
+      char: 'l',
+      description: 'Language used in the source code to search for .env variables',
+      options: [
+        'node',
+      ],
+      dependsOn: ['experimental', 'src'],
+    }),
     format: flags.enum({
       char: 'f',
       options: ['env-template', 'md'],
