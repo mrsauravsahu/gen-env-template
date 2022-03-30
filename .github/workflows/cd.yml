@@ -7,6 +7,7 @@ on:
 
 env:
   NODE_VERSION: "16.14.2"
+  MAIN_BRANCH: "main"
 
 jobs:
   deploy_package:
@@ -15,6 +16,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: check if deployment is needed
+        run: git diff ${{ env.MAIN_BRANCH }} HEAD -- package.json | grep -e '+\s*"version"'
 
       - name: setup node
         uses: actions/setup-node@v1
