@@ -4,11 +4,37 @@ on: [push]
 
 jobs:
   build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     name: Run tests
-    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@master
 
-      - name: run tests
-        run: docker build --rm -f "tests.dockerfile" .
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: install deps
+        run: npm ci
+
+      - name: check audits
+        run: npm audit
+
+      - name: install package for npx tests
+        run: npm i -g file:./
+
+      - name: run unit tests
+        env:
+          GEN_ENV_TEMPLATE_BASE: ${{ github.workspace }}
+          GEN_ENV_TEMPLATE_ABSOLUTE_PATH: ${{ github.workspace }}${{ matrix.os == 'windows-latest' && '\src\bin\run' || '/src/bin/run' }}
+        run: npm run test:unit
+
+      - name: run e2e tests
+        env:
+          GEN_ENV_TEMPLATE_BASE: ${{ github.workspace }}
+          GEN_ENV_TEMPLATE_ABSOLUTE_PATH: ${{ github.workspace }}${{ matrix.os == 'windows-latest' && '\src\bin\run' || '/src/bin/run' }}
+        run: npm run test:e2e
