@@ -1,6 +1,9 @@
 name: test-workflow
 
-on: [push]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
