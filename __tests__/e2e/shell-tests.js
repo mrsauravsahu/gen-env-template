@@ -8,7 +8,7 @@ const bin = `node ${process.env.GEN_ENV_TEMPLATE_ABSOLUTE_PATH}`
 
 describe('gen-env-template file based shell tests', () => {
   beforeAll(() => {
-    shell.exec(`mkdir ${testTempOutputPath}`)
+    shell.mkdir(testTempOutputPath)
   })
 
   afterAll(() => {

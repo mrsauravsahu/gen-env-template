@@ -8,11 +8,11 @@ const testTempOutputPath = `${basePath}${path.sep}npx-tests`
 
 describe('gen-env-template file based npx tests', () => {
   beforeAll(() => {
-    shell.exec(`mkdir ${testTempOutputPath}`)
+    shell.mkdir(testTempOutputPath)
   })
 
   afterAll(() => {
-    shell.exec(`rm -r ${testTempOutputPath}`)
+    shell.rm('-r', testTempOutputPath)
   })
 
   const dirList = fs.readdirSync(basePath, { withFileTypes: true })
