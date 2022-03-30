@@ -56,6 +56,7 @@
         "shelljs": "^0.8.5"
     },
     "dependencies": {
-        "@oclif/command": "^1.8.16"
+        "@oclif/command": "^1.8.16",
+        "rools": "^2.3.0"
     }
 }
