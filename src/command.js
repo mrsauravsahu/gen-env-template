@@ -41,7 +41,7 @@ class GenEnvTemplateCommand extends Command {
       char: 'l',
       description: 'Language used in the source code to search for .env variables',
       options: [
-        'node',
+        'nodejs',
       ],
       dependsOn: ['experimental', 'src'],
     }),
