@@ -57,6 +57,7 @@
     },
     "dependencies": {
         "@oclif/command": "^1.8.16",
+        "execa": "^6.1.0",
         "rools": "^2.3.0"
     }
 }
