@@ -1,7 +1,11 @@
 const { promises } = require('fs')
+const { EOL } = require('os')
 const { Command, flags } = require('@oclif/command')
+const { Rools } = require('rools')
 const packageInfo = require('../package.json')
 const genEnvTemplate = require('./gen-env-template')
+const { nodejsEnvRule } = require('./utils/nodejs-env-rule')
+const { tokenize } = require('./tokenize')
 
 class GenEnvTemplateCommand extends Command {
   static args = [
@@ -63,11 +67,28 @@ class GenEnvTemplateCommand extends Command {
       { encoding: 'utf-8' },
     )
 
+    const tokens = tokenize(envFileString, appFlags.format)
     const templateFileString = genEnvTemplate(envFileString, appFlags.format)
 
+    if (appFlags.experimental) {
+      const facts = {
+        flags: appFlags,
+      }
+      const missingEnvRool = new Rools()
+      missingEnvRool.register([
+        nodejsEnvRule,
+      ])
+
+      await missingEnvRool.evaluate(facts)
+      const missedKeys = facts.results.keys
+        .filter((key) => tokens.find((token) => token.key === key) === undefined)
+
+      this.warn('Looks like you missed some environment variables.')
+      this.log(missedKeys.join(EOL))
+    }
+
     if (appFlags['dry-run']) {
-      // eslint-disable-next-line no-console
-      console.log(templateFileString)
+      this.log(templateFileString)
     } else {
       await promises.writeFile(args.dest, templateFileString, { encoding: 'utf-8' })
     }
