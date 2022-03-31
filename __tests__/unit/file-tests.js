@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const genEnvTemplate = require('../../src/gen-env-template')
 
-const basePath = `${path.resolve(__dirname, '..')}${path.sep}file-samples`
+const basePath = `${path.resolve(__dirname, '..')}${path.sep}mock-data${path.sep}file-samples`
 
 describe('unit', () => {
   describe('file sample tests', () => {

@@ -3,7 +3,7 @@ const shell = require('shelljs')
 const path = require('path')
 const { name: packageName } = require('../../package.json')
 
-const basePath = `${path.resolve(__dirname, '..')}${path.sep}file-samples`
+const basePath = `${path.resolve(__dirname, '..')}${path.sep}mock-data${path.sep}file-samples`
 const testTempOutputPath = `${basePath}${path.sep}npx-tests`
 
 describe('e2e', () => {

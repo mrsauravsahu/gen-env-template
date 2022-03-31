@@ -2,7 +2,7 @@ const { readdirSync, readFileSync, existsSync } = require('fs')
 const shell = require('shelljs')
 const path = require('path')
 
-const basePath = `${path.resolve(__dirname, '..')}${path.sep}file-samples`
+const basePath = `${path.resolve(__dirname, '..')}${path.sep}mock-data${path.sep}file-samples`
 const testTempOutputPath = `${basePath}${path.sep}shell-tests`
 const bin = `node ${process.env.GEN_ENV_TEMPLATE_ABSOLUTE_PATH}`
 
