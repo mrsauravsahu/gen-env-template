@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - '__tests__/**'
+      - '!__tests__/mock-data/**'
 
 jobs:
   build:
