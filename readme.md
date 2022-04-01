@@ -6,7 +6,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Generate template .env file from your .env file.
+Generate template `.env.example` file from your `.env` file.
 
 ## Contributors ✨
 
@@ -30,7 +30,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 ## Why?
 
-A well documented template .env file helps setup the app.
+A well documented template `.env` file helps set up the app.
 
 ## How to use?
 
@@ -42,7 +42,7 @@ This package exposes both a CLI and an SDK.
 
 - You can install `gen-env-template` as a devDependency.
 
-```
+```shell
 $ npm i -D gen-env-template
 
 $ pnpm i -D gen-env-template
@@ -52,8 +52,14 @@ $ yarn add --dev gen-env-template
 
 You can now use the command like so:
 
+```sh
+$ ./node_modules/.bin/gen-env-template [path to input .env]=.env [path to output .env]=.env.example
 ```
-./node_modules/.bin/gen-env-template [path to input .env]=.env [path to output .env]=template.env
+
+**Usage with npx:**
+
+```sh
+$ npx gen-env-template [path to input .env]=.env [path to output .env]=.env.example
 ```
 
 (`genv` is a shorthand command which can be used interchangeably.)
@@ -64,7 +70,7 @@ This will write the output to the path specified.
 
 The main import exposes a function with takes in the string contents of the .env file and returns the template string output
 
-```
+```js
 const genEnvTemplate = require('gen-env-template')
 
 const inputString = 'NODE_ENV=development'
@@ -76,7 +82,7 @@ console.log(genEnvTemplate(inputString))
 
 ### Licensing 
 
-This project uses the MIT license as explained [here](./LICENSE)
+This project uses the MIT license as explained [here](./LICENSE).
 
 ### Contributing 
 
