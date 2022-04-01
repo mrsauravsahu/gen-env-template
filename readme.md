@@ -52,8 +52,14 @@ $ yarn add --dev gen-env-template
 
 You can now use the command like so:
 
+```sh
+$ ./node_modules/.bin/gen-env-template [path to input .env]=.env [path to output .env]=.env.example
 ```
-$ npx [path to input .env]=.env [path to output .env]=.env.example
+
+**Usage with npx:**
+
+```sh
+$ npx gen-env-template [path to input .env]=.env [path to output .env]=.env.example
 ```
 
 (`genv` is a shorthand command which can be used interchangeably.)
