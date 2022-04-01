@@ -3,7 +3,7 @@
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/gen-env-template.svg)](https://npmjs.org/package/gen-env-template)
 [![License](https://img.shields.io/npm/l/gen-env-template.svg)](https://github.com/mrsauravsahu/gen-env-template/blob/main/LICENSE)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Generate template .env file from your .env file.
@@ -17,9 +17,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+    <td align="center"><a href="https://github.com/mrsauravsahu"><img src="https://avatars.githubusercontent.com/u/9134050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saurav Sahu</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=mrsauravsahu" title="Code">💻</a></td>
     <td align="center"><a href="http://abishekaditya.me"><img src="https://avatars.githubusercontent.com/u/9787009?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abishek Aditya</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/issues?q=author%3Aabishekaditya" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/RamPrasadAgarwal"><img src="https://avatars.githubusercontent.com/u/17383560?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ram Prasad Agarwal</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=RamPrasadAgarwal" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/mrsauravsahu"><img src="https://avatars.githubusercontent.com/u/9134050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saurav Sahu</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=mrsauravsahu" title="Code">💻</a></td>
+    <td align="center"><a href="http://linkedin.com/in/tbueschel"><img src="https://avatars.githubusercontent.com/u/13087421?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tobias Büschel</b></sub></a><br /><a href="https://github.com/mrsauravsahu/gen-env-template/commits?author=tobiasbueschel" title="Documentation">📖</a></td>
   </tr>
 </table>
 
