@@ -1,4 +1,4 @@
-const getLineEnding = require('../../src/get-line-ending')
+const getLineEnding = require('../../../src/utils/get-line-ending')
 
 describe('unit', () => {
   describe(getLineEnding.name, () => {

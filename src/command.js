@@ -2,10 +2,11 @@ const { promises } = require('fs')
 const { EOL } = require('os')
 const { Command, flags } = require('@oclif/command')
 const { Rools } = require('rools')
+
 const packageInfo = require('../package.json')
 const genEnvTemplate = require('./gen-env-template')
 const { nodejsEnvRule } = require('./utils/nodejs-env-rule')
-const { tokenize } = require('./tokenize')
+const { tokenize } = require('./utils/tokenize')
 
 class GenEnvTemplateCommand extends Command {
   static args = [
