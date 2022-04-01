@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: check if deployment is needed
-        run: git diff ${{ env.MAIN_BRANCH }} HEAD -- package.json | grep -e '+\s*"version"'
+        run: git diff HEAD~1 HEAD -- package.json | grep -e '+\s*"version"'
 
       - name: setup node
         uses: actions/setup-node@v1
