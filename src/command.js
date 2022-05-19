@@ -36,6 +36,10 @@ class GenEnvTemplateCommand extends Command {
       name: 'format',
       required: false,
     }),
+    'remove-regions': flags.boolean({
+      char: 'r',
+      description: 'remove region comments from the template',
+    }),
   }
 
   async run() {
