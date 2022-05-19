@@ -17,9 +17,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: check if deployment is needed
-        run: git diff HEAD~1 HEAD -- package.json | grep -e '+\s*"version"'
-
       - name: setup node
         uses: actions/setup-node@v1
         with:
