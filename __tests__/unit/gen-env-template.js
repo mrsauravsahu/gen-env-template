@@ -99,6 +99,20 @@ DB_CONNECTION_STRING=host=localhost
 |NODE_ENV|development|
 |DB_CONNECTION_STRING|host=localhost|`)
       })
+
+      test('should remove region comments if remove-regions flag is true', () => {
+        const envFileString = `SAMPLE_KEY1=value1
+
+#region safe
+SAMPLE_KEY2=value2
+#endregion safe
+`
+
+        expect(genEnvTemplate(envFileString, 'env-template', { removeRegions: true })).toEqual(`SAMPLE_KEY1=
+
+SAMPLE_KEY2=value2
+`)
+      })
     })
   })
 })
