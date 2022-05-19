@@ -38,6 +38,7 @@ class GenEnvTemplateCommand extends Command {
     }),
     'remove-regions': flags.boolean({
       char: 'r',
+      default: false,
       description: 'remove region comments from the template',
     }),
   }
@@ -50,7 +51,9 @@ class GenEnvTemplateCommand extends Command {
       { encoding: 'utf-8' },
     )
 
-    const templateFileString = genEnvTemplate(envFileString, appFlags.format)
+    const templateFileString = genEnvTemplate(envFileString, appFlags.format, {
+      removeRegions: appFlags['remove-regions'],
+    })
 
     if (appFlags['dry-run']) {
       // eslint-disable-next-line no-console
