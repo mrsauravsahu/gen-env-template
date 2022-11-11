@@ -86,7 +86,6 @@ function genEnvTemplate(envFileString = '', format = 'env-template', { removeReg
       }
 
       currentToken.isInSafeRegion = isInSafeRegion
-      // console.log(JSON.stringify(accumulator, undefined, 2))
       return [...accumulator, currentToken]
     }, [])
 
