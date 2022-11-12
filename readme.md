@@ -93,6 +93,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## What's new? 🎉 🥳
 
+- **v2.1.0** - Improv: Ability to read multiline variables
 - **v2.0.7** - Feat: Ability to remove region comments `#region safe`, `#endregion safe`
 - **v2.0.6** - CI: Improvement (Use matrix builds to test on Windows, Linux and Mac)
 - **v2.0.5** - Fix npm audit issues & bump node version
