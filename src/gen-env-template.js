@@ -58,6 +58,7 @@ function genEnvTemplate(envFileString = '', format = 'env-template', { removeReg
           const value = cleanedCurrentLine
           if (value.endsWith('"')) {
             currentToken.value += `${value}`
+            isReadingMultilineValue = false
           }
 
           return [...accumulator, currentToken]
