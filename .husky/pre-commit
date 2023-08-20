@@ -3,7 +3,7 @@
 
 npm run lint:staged
 
-envFile=.env
+envFile=.envrc
 
 src/bin/run $envFile template$envFile
 src/bin/run -f md $envFile template$envFile.md
