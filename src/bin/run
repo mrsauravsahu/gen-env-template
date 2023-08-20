@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
+const errorHandler = require('@oclif/errors/handle')
 const Command = require('../command')
 
 Command
   .run()
-  .catch(require('@oclif/errors/handle'))
+  .catch(errorHandler)
