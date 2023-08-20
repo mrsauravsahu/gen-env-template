@@ -1,6 +1,6 @@
 {
     "name": "gen-env-template",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Generate .env template file from .env",
     "main": "src/bin/run",
     "scripts": {
@@ -43,7 +43,6 @@
         "@babel/eslint-parser": "^7.16.5",
         "@oclif/config": "^1.18.2",
         "@oclif/dev-cli": "^1.26.10",
-        "@oclif/errors": "^1.3.5",
         "@oclif/plugin-help": "^3.3.1",
         "@types/jest": "^26.0.24",
         "all-contributors-cli": "^6.20.0",
@@ -56,6 +55,7 @@
         "shelljs": "^0.8.5"
     },
     "dependencies": {
-        "@oclif/command": "^1.8.16"
+        "@oclif/command": "^1.8.36",
+        "@oclif/errors": "^1.3.6"
     }
 }

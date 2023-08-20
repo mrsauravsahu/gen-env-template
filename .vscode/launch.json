@@ -5,17 +5,30 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "stopOnEntry": true,
+      "name": "Launch Program MD",
+      "program": "${workspaceFolder}/src/bin/run",
+      "args": [
+        "-f=md", ".envrc", "template.envrc.md"
+      ],
       "request": "launch",
-      "name": "Launch Program",
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "type": "node"
+    },
+    {
+      "stopOnEntry": true,
+      "name": "Launch Program",
       "program": "${workspaceFolder}/src/bin/run",
       "args": [
-        "__tests__/file-samples/lf-and-crlf.input.env",
-        "playground/test.output.env"
-      ]
+        ".envrc", "template.envrc"
+      ],
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
     }
   ]
 }
